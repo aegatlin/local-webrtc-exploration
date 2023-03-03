@@ -1,6 +1,46 @@
 <!DOCTYPE html>
-<body>
-  <h1>Hello</h1>
-  <script src="./index.js"></script>
-</body>
+<html>
+  <body>
+    <h1>No Server RTCDataChannel Example</h1>
+    <p>
+      You can either create an SDP offer, or create an SDP answer. Don't do
+      both!
+    </p>
+
+    <h2>Create SDP offer</h2>
+    <button id="create-offer">Create</button>
+    <h3>SDP Offer</h3>
+    <div id="offer"></div>
+    <h3>ICE candidates</h3>
+    <div id="candidates"></div>
+
+    <h2>Create SDP answer</h2>
+    <h3>peer offer</h3>
+    <div>
+      <textarea
+        id="peer-offer"
+        placeholder="peer SDP offer"
+        rows="8"
+        cols="120"
+      ></textarea>
+    </div>
+    <h3>peer ice candidates</h3>
+    <div>
+      <textarea
+        id="peer-ice-candidates"
+        placeholder="peer ICE candidates"
+        rows="8"
+        cols="120"
+      ></textarea>
+    </div>
+    <div>
+      <button id="create-answer">Create Answer</button>
+    </div>
+    <h3>SDP Answer</h3>
+    <div id="answer"></div>
+    <h3>ICE candidates</h3>
+    <div id="answer-candidates"></div>
+    
+    <script src="./index.js" async></script>
+  </body>
 </html>
